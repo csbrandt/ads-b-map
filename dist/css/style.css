@@ -1,0 +1,51 @@
+svg text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  pointer-events: none;
+}
+svg .graticule {
+  fill: none;
+  stroke: #20284d;
+}
+svg .boundary {
+  fill: #1c1c1c;
+  fill-opacity: 1;
+  stroke: #1c641c;
+}
+svg .flight {
+  fill: #fffa75;
+}
+svg .points .flight-arrow {
+  fill: #fffa75;
+}
+svg .points .flight-arrow.military {
+  color: #3cfefc;
+}
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.map-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 2.4em;
+}
+.map-container .flight-label {
+  font-family: monospace;
+  font-size: 0.8em;
+  line-height: 1;
+  color: #fffa75;
+  padding-left: 13px;
+}
+.map-container .flight-label.military {
+  color: #3cfefc;
+}
+.ink-navigation ul.menu.black {
+  background-color: #0f0f0f;
+}

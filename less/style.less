@@ -1,0 +1,40 @@
+@import "./svg.less";
+
+html,
+body {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 18px;
+   padding: 0;
+   margin: 0;
+   overflow: hidden;
+}
+.map-container {
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   top: 2.4em;
+
+   .flight-label {
+      font-family: monospace;
+      font-size: 0.8em;
+      line-height: 1;
+      color: #fffa75;
+      padding-left: 13px;
+
+      &.military {
+         color: #3cfefc;
+      }
+   }
+}
+.ink-navigation ul.menu.black {
+   background-color: #0f0f0f;
+}
+
+.ac-symbol-add-style(@fill, @stroke, @stroke-width) {
+   @data-uri: data-uri('image/svg+xml;charset=UTF-8', 'location-arrow.svg');
+   @replace-default: escape('<svg ');
+   @replace-new: escape('<svg fill="@{fill}" stroke="@{stroke}" stroke-width="@{stroke-width}" ');
+   @replace-src: replace("@{data-uri}", @replace-default, @replace-new, "g");
+   background-image: e(@replace-src);
+}
